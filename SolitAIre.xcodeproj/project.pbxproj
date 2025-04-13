@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A157A6892DAC38E900FE0272 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A157A66F2DAC38E400FE0272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A157A6762DAC38E400FE0272;
+			remoteInfo = SolitAIre;
+		};
+		A157A6932DAC38E900FE0272 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A157A66F2DAC38E400FE0272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A157A6762DAC38E400FE0272;
+			remoteInfo = SolitAIre;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A157A6772DAC38E400FE0272 /* SolitAIre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolitAIre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A157A6882DAC38E900FE0272 /* SolitAIreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolitAIreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A157A6922DAC38E900FE0272 /* SolitAIreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolitAIreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		A157A69A2DAC38E900FE0272 /* Exceptions for "SolitAIre" folder in "SolitAIre" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = A157A6762DAC38E400FE0272 /* SolitAIre */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A157A6792DAC38E400FE0272 /* SolitAIre */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				A157A69A2DAC38E900FE0272 /* Exceptions for "SolitAIre" folder in "SolitAIre" target */,
+			);
+			path = SolitAIre;
+			sourceTree = "<group>";
+		};
+		A157A68B2DAC38E900FE0272 /* SolitAIreTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SolitAIreTests;
+			sourceTree = "<group>";
+		};
+		A157A6952DAC38E900FE0272 /* SolitAIreUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SolitAIreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A157A6742DAC38E400FE0272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A6852DAC38E900FE0272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A68F2DAC38E900FE0272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A157A66E2DAC38E200FE0272 = {
+			isa = PBXGroup;
+			children = (
+				A157A6792DAC38E400FE0272 /* SolitAIre */,
+				A157A68B2DAC38E900FE0272 /* SolitAIreTests */,
+				A157A6952DAC38E900FE0272 /* SolitAIreUITests */,
+				A157A6782DAC38E400FE0272 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A157A6782DAC38E400FE0272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A157A6772DAC38E400FE0272 /* SolitAIre.app */,
+				A157A6882DAC38E900FE0272 /* SolitAIreTests.xctest */,
+				A157A6922DAC38E900FE0272 /* SolitAIreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A157A6762DAC38E400FE0272 /* SolitAIre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A157A69B2DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIre" */;
+			buildPhases = (
+				A157A6732DAC38E400FE0272 /* Sources */,
+				A157A6742DAC38E400FE0272 /* Frameworks */,
+				A157A6752DAC38E400FE0272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A157A6792DAC38E400FE0272 /* SolitAIre */,
+			);
+			name = SolitAIre;
+			packageProductDependencies = (
+			);
+			productName = SolitAIre;
+			productReference = A157A6772DAC38E400FE0272 /* SolitAIre.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A157A6872DAC38E900FE0272 /* SolitAIreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A157A6A02DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIreTests" */;
+			buildPhases = (
+				A157A6842DAC38E900FE0272 /* Sources */,
+				A157A6852DAC38E900FE0272 /* Frameworks */,
+				A157A6862DAC38E900FE0272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A157A68A2DAC38E900FE0272 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A157A68B2DAC38E900FE0272 /* SolitAIreTests */,
+			);
+			name = SolitAIreTests;
+			packageProductDependencies = (
+			);
+			productName = SolitAIreTests;
+			productReference = A157A6882DAC38E900FE0272 /* SolitAIreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A157A6912DAC38E900FE0272 /* SolitAIreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A157A6A32DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIreUITests" */;
+			buildPhases = (
+				A157A68E2DAC38E900FE0272 /* Sources */,
+				A157A68F2DAC38E900FE0272 /* Frameworks */,
+				A157A6902DAC38E900FE0272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A157A6942DAC38E900FE0272 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A157A6952DAC38E900FE0272 /* SolitAIreUITests */,
+			);
+			name = SolitAIreUITests;
+			packageProductDependencies = (
+			);
+			productName = SolitAIreUITests;
+			productReference = A157A6922DAC38E900FE0272 /* SolitAIreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A157A66F2DAC38E400FE0272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					A157A6762DAC38E400FE0272 = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					A157A6872DAC38E900FE0272 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A157A6762DAC38E400FE0272;
+					};
+					A157A6912DAC38E900FE0272 = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = A157A6762DAC38E400FE0272;
+					};
+				};
+			};
+			buildConfigurationList = A157A6722DAC38E400FE0272 /* Build configuration list for PBXProject "SolitAIre" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A157A66E2DAC38E200FE0272;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A157A6782DAC38E400FE0272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A157A6762DAC38E400FE0272 /* SolitAIre */,
+				A157A6872DAC38E900FE0272 /* SolitAIreTests */,
+				A157A6912DAC38E900FE0272 /* SolitAIreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A157A6752DAC38E400FE0272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A6862DAC38E900FE0272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A6902DAC38E900FE0272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A157A6732DAC38E400FE0272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A6842DAC38E900FE0272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A157A68E2DAC38E900FE0272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A157A68A2DAC38E900FE0272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A157A6762DAC38E400FE0272 /* SolitAIre */;
+			targetProxy = A157A6892DAC38E900FE0272 /* PBXContainerItemProxy */;
+		};
+		A157A6942DAC38E900FE0272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A157A6762DAC38E400FE0272 /* SolitAIre */;
+			targetProxy = A157A6932DAC38E900FE0272 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A157A69C2DAC38E900FE0272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SolitAIre/SolitAIre.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolitAIre/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A157A69D2DAC38E900FE0272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SolitAIre/SolitAIre.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolitAIre/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A157A69E2DAC38E900FE0272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A157A69F2DAC38E900FE0272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A157A6A12DAC38E900FE0272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolitAIre.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SolitAIre";
+			};
+			name = Debug;
+		};
+		A157A6A22DAC38E900FE0272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolitAIre.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SolitAIre";
+			};
+			name = Release;
+		};
+		A157A6A42DAC38E900FE0272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SolitAIre;
+			};
+			name = Debug;
+		};
+		A157A6A52DAC38E900FE0272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DCQ3V8BLU5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petter.braka.SolitAIreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SolitAIre;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A157A6722DAC38E400FE0272 /* Build configuration list for PBXProject "SolitAIre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A157A69E2DAC38E900FE0272 /* Debug */,
+				A157A69F2DAC38E900FE0272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A157A69B2DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A157A69C2DAC38E900FE0272 /* Debug */,
+				A157A69D2DAC38E900FE0272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A157A6A02DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A157A6A12DAC38E900FE0272 /* Debug */,
+				A157A6A22DAC38E900FE0272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A157A6A32DAC38E900FE0272 /* Build configuration list for PBXNativeTarget "SolitAIreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A157A6A42DAC38E900FE0272 /* Debug */,
+				A157A6A52DAC38E900FE0272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A157A66F2DAC38E400FE0272 /* Project object */;
+}
