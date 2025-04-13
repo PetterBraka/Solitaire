@@ -13,16 +13,22 @@ struct MainMenu: View {
     @Query private var saves: [SaveData]
 
     var body: some View {
-        NavigationView {
-            VStack {
+        NavigationStack {
+            VStack(spacing: 16) {
+                Spacer()
                 if let currentSave = saves.first(where: { $0.endDate == nil }) {
-                    Button("Continue Game") {
-                        print("Continuing game with save ID: \(currentSave.id)")
-                    }
+                    NavigationLink("Continue Game", value: currentSave)
                 }
-                Button("New Game") {
-                }
+                NavigationLink("New Game", value: SaveData(
+                    startDate: .now,
+                    endDate: nil,
+                    score: .init(name: nil, score: 0, time: 0),
+                    board: [],
+                    deck: Card.fullDeck
+                ))
             }
+            .padding(16)
+            .buttonStyle(MainMenuButtonStyle())
             .navigationTitle("SolitAIre")
         }
     }
