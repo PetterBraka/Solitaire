@@ -30,6 +30,9 @@ struct MainMenu: View {
             .padding(16)
             .buttonStyle(MainMenuButtonStyle())
             .navigationTitle("SolitAIre")
+            .navigationDestination(for: SaveData.self) { save in
+                GameScene(game: save)
+            }
         }
     }
 }
