@@ -17,38 +17,10 @@ struct SolitAIreApp: App {
         let config = ModelConfiguration(
             allowsSave: true,
             groupContainer: .identifier("group.petter.braka.SolitAIre"),
-            cloudKitDatabase: .private("iCloud.com.petter.braka.SolitAIre")
+            cloudKitDatabase: .none // .private("iCloud.com.petter.braka.SolitAIre")
         )
         
         do {
-#if DEBUG
-            // Use an autorelease pool to make sure Swift deallocates the persistent
-            // container before setting up the SwiftData stack.
-            try autoreleasepool {
-                let storeDescription = NSPersistentStoreDescription(url: config.url)
-                let options = NSPersistentCloudKitContainerOptions(containerIdentifier: "iCloud.com.petter.braka.SolitAIre")
-                storeDescription.cloudKitContainerOptions = options
-                // Load the store synchronously so it completes before initializing the
-                // CloudKit schema.
-                storeDescription.shouldAddStoreAsynchronously = false
-                if let managedObject = NSManagedObjectModel.makeManagedObjectModel(for: [HighScore.self, SaveData.self]) {
-                    let container = NSPersistentCloudKitContainer(name: "SolitAIre", managedObjectModel: managedObject)
-                    container.persistentStoreDescriptions = [storeDescription]
-                    container.loadPersistentStores {_, error in
-                        if let error {
-                            print(error)
-                            fatalError(error.localizedDescription)
-                        }
-                    }
-                    // Initialize the CloudKit schema after the store finishes loading.
-                    try container.initializeCloudKitSchema()
-                    // Remove and unload the store from the persistent container.
-                    if let store = container.persistentStoreCoordinator.persistentStores.first {
-                        try container.persistentStoreCoordinator.remove(store)
-                    }
-                }
-            }
-#endif
             modelContainer = try ModelContainer(for: HighScore.self, SaveData.self, configurations: config)
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
