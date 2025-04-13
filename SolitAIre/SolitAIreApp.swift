@@ -34,9 +34,10 @@ struct SolitAIreApp: App {
                 if let managedObject = NSManagedObjectModel.makeManagedObjectModel(for: [HighScore.self, SaveData.self]) {
                     let container = NSPersistentCloudKitContainer(name: "SolitAIre", managedObjectModel: managedObject)
                     container.persistentStoreDescriptions = [storeDescription]
-                    container.loadPersistentStores {_, err in
-                        if let err {
-                            fatalError(err.localizedDescription)
+                    container.loadPersistentStores {_, error in
+                        if let error {
+                            print(error)
+                            fatalError(error.localizedDescription)
                         }
                     }
                     // Initialize the CloudKit schema after the store finishes loading.

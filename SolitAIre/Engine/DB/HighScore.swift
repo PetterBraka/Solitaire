@@ -10,15 +10,15 @@ import SwiftData
 
 @Model
 public final class HighScore: Hashable {
-    #Unique<HighScore>([\.id, \.name])
-    
-    public var id: String
+    public var id: String = UUID().uuidString
     public var name: String?
-    public var score: Int
-    public var time: TimeInterval
+    public var score: Int = 0
+    public var time: TimeInterval = 0
     
-    init(id: String = UUID().uuidString, name: String?, score: Int, time: TimeInterval) {
-        self.id = id
+    @Relationship(deleteRule: .cascade, minimumModelCount: 1, maximumModelCount: 1)
+    public var save: SaveData?
+    
+    init(name: String?, score: Int, time: TimeInterval) {
         self.name = name
         self.score = score
         self.time = time
