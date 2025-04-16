@@ -9,16 +9,58 @@ import SwiftUI
 
 public struct CardView<BackgroundView: View>: View {
     let card: Card
-    
+    let flipped: Bool
     let backgroundView: () -> BackgroundView
+    
+    init(
+        card: Card,
+        flipped: Bool = false,
+        backgroundView: @escaping () -> BackgroundView
+    ) {
+        self.card = card
+        self.flipped = flipped
+        self.backgroundView = backgroundView
+    }
     
     var rank: Text { Text(card.rank.symbol).bold() }
     
     var suit: Image { Image(systemName: card.suit.symbol + ".fill") }
     
     @State private var width: CGFloat = 0
+    private var cornerRadius: CGFloat { width * 0.05 }
     
     public var body: some View {
+        Group {
+            if card.suit == .empty {
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(lineWidth: width * 0.05)
+                    .foregroundStyle(Color.black.opacity(0.25))
+            } else {
+                Group {
+                    if flipped {
+                        RoundedRectangle(cornerRadius: cornerRadius)
+                            .stroke(lineWidth: width * 0.02)
+                    } else {
+                        face
+                    }
+                }
+                .frame(maxHeight: .infinity)
+                .padding(width * 0.05)
+                .background {
+                    backgroundView()
+                }
+            }
+        }
+        .background {
+            GeometryReader { geometry in
+                Color.clear.onAppear { width = geometry.size.width }
+            }
+        }
+        .aspectRatio(2.5/3.5, contentMode: .fit)
+        .cornerRadius(cornerRadius)
+    }
+    
+    var face: some View {
         VStack {
             HStack {
                 suit
@@ -40,24 +82,33 @@ public struct CardView<BackgroundView: View>: View {
                     .scaleWidth(0.18, using: width)
             }
         }
-        .frame(maxHeight: .infinity)
-        .padding(width * 0.05)
-        .background {
-            GeometryReader { geometry in
-                backgroundView().onAppear { width = geometry.size.width }
-            }
-        }
-        .aspectRatio(2.5/3.5, contentMode: .fit)
-        .cornerRadius(width * 0.05)
+    }
+    
+    var back: some View {
+        RoundedRectangle(cornerRadius: cornerRadius)
+            .fill(.red)
+    }
+}
+extension CardView {
+    func flipCard() -> CardView {
+        CardView(card: self.card, flipped: true, backgroundView: self.backgroundView)
+    }
+}
+
+extension CardView where BackgroundView == Color {
+    init (card: Card) {
+        self.card = card
+        self.flipped = false
+        self.backgroundView = { Color.white }
     }
 }
 
 private extension Image {
     func scaleWidth(_ value: CGFloat, using width: CGFloat) -> some View {
         self
-        .resizable()
-        .aspectRatio(contentMode: .fit)
-        .frame(maxWidth: width * value)
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(maxWidth: width * value)
     }
 }
 
@@ -73,15 +124,20 @@ private extension Text {
             .ignoresSafeArea()
         HStack(spacing: 10) {
             let deck = Card.fullDeck
-            ForEach(deck.prefix(7), id: \.hashValue) { card in
+            ForEach(deck.prefix(6), id: \.hashValue) { card in
                 let tint: Color = switch card.suit {
                 case .diamonds, .hearts: .red
-                case .clubs, .spades: .black
+                case .clubs, .spades, .empty: .black
                 }
                 CardView(card: card) {
                     Color.white
                 }
+                .flipCard()
                 .foregroundStyle(tint)
+            }
+            
+            CardView(card: .empty) {
+                Color.white
             }
         }
         .padding(20)

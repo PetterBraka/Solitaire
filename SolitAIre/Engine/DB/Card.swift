@@ -14,6 +14,7 @@ public struct Card: Codable, Hashable, Sendable {
         case diamonds = "suit.diamond"
         case hearts = "suit.heart"
         case spades = "suit.spade"
+        case empty
         
         var symbol: String { rawValue }
     }
@@ -39,6 +40,8 @@ public struct Card: Codable, Hashable, Sendable {
 }
 
 extension Card {
+    static let empty: Card = .init(suit: .empty, rank: .one)
+    
     static let fullDeck: [Card] = {
         Card.Suit.allCases.flatMap { suit in
             Card.Rank.allCases.map { rank in
