@@ -21,7 +21,7 @@ struct SolitAIreApp: App {
         )
         
         do {
-            modelContainer = try ModelContainer(for: HighScore.self, SaveData.self, configurations: config)
+            modelContainer = try ModelContainer(for: HighScore.self, SaveData.self, Theme.self, configurations: config)
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }

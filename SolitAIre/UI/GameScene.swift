@@ -10,8 +10,13 @@ import SwiftData
 
 public struct GameScene: View {
     @Environment(\.modelContext) private var modelContext
+    @Query(FetchDescriptor<Theme>.default) var storedThemes: [Theme]
+
     public var game: SaveData
-    
+    public var theme: Theme {
+        storedThemes.first ?? Theme()
+    }
+
     init(game: SaveData) {
         self.game = game
     }
@@ -25,17 +30,12 @@ public struct GameScene: View {
             HStack(spacing: 10) {
                 ForEach(game.board, id: \.hashValue) { column in
                     if column.isEmpty {
-                        CardView(card: .empty)
+                        CardView(card: .empty, theme: theme)
                     } else {
                         ForEach(column, id: \.hashValue) { card in
-                            let tint: Color = switch card.suit {
-                            case .diamonds, .hearts: .red
-                            case .clubs, .spades, .empty: .black
-                            }
-                            CardView(card: card) {
+                            CardView(card: card, theme: theme) {
                                 Color.white
                             }
-                            .foregroundStyle(tint)
                         }
                     }
                 }
@@ -70,5 +70,5 @@ public struct GameScene: View {
             ],
             deck: [.init(suit: .diamonds, rank: .five)]
         )
-    )
+    ).modelContainerPreview()
 }

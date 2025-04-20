@@ -39,5 +39,5 @@ struct MainMenu: View {
 
 #Preview {
     MainMenu()
-        .modelContainer(for: [HighScore.self, SaveData.self], inMemory: true)
+        .modelContainerPreview()
 }
