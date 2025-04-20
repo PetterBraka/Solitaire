@@ -96,25 +96,10 @@ extension CardView {
 }
 
 extension CardView where BackgroundView == Color {
-    init (card: Card) {
+    init (card: Card, flipped: Bool = false) {
         self.card = card
-        self.flipped = false
+        self.flipped = flipped
         self.backgroundView = { Color.white }
-    }
-}
-
-private extension Image {
-    func scaleWidth(_ value: CGFloat, using width: CGFloat) -> some View {
-        self
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: width * value)
-    }
-}
-
-private extension Text {
-    func scaleWidth(_ value: CGFloat, using width: CGFloat) -> some View {
-        font(.system(size: width * value))
     }
 }
 
@@ -132,7 +117,6 @@ private extension Text {
                 CardView(card: card) {
                     Color.white
                 }
-                .flipCard()
                 .foregroundStyle(tint)
             }
             
