@@ -6,6 +6,6 @@
 //
 
 public enum CardStyle: Codable {
-    case oldSchool
+    case old
     case modern
 }

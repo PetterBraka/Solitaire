@@ -18,27 +18,21 @@ public final class Theme: Identifiable {
     public var cardTintClub: CodableColor
     public var cardOutline: CodableColor
 
-    public var cardStyle: CardStyle = CardStyle.modern
-
-    init(cardTintHeart: CodableColor, cardTintDimmond: CodableColor, cardTintSpade: CodableColor, cardTintClub: CodableColor, cardOutline: CodableColor, cardStyle: CardStyle) {
+    public var cardStyle: CardStyle
+    
+    init(
+        cardTintHeart: CodableColor = .init(from: .red),
+        cardTintDimmond: CodableColor = .init(from: .red),
+        cardTintSpade: CodableColor = .init(from: .black),
+        cardTintClub: CodableColor = .init(from: .black),
+        cardOutline: CodableColor = .init(from: .black),
+        cardStyle: CardStyle = .old
+    ) {
         self.cardTintHeart = cardTintHeart
         self.cardTintDimmond = cardTintDimmond
         self.cardTintSpade = cardTintSpade
         self.cardTintClub = cardTintClub
         self.cardOutline = cardOutline
         self.cardStyle = cardStyle
-    }
-}
-
-extension Theme {
-    convenience init() {
-        self.init(
-            cardTintHeart: .init(from: .red),
-            cardTintDimmond: .init(from: .red),
-            cardTintSpade: .init(from: .black),
-            cardTintClub: .init(from: .black),
-            cardOutline: .init(from: .black),
-            cardStyle: .oldSchool
-        )
     }
 }

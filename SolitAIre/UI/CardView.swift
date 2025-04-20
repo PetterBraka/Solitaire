@@ -29,19 +29,20 @@ public struct CardView<BackgroundView: View>: View {
     var rank: Text { Text(card.rank.symbol).bold() }
     
     var suit: Image { Image(systemName: card.suit.symbol + ".fill") }
-    
-    @State private var width: CGFloat = 0
-    private var cornerRadius: CGFloat { width * 0.05 }
-    
-    public var body: some View {
-        let tint: Color = switch card.suit {
+    var tintColor: Color {
+        switch card.suit {
         case .hearts: theme.cardTintHeart.toColor()
         case .diamonds: theme.cardTintDimmond.toColor()
         case .spades: theme.cardTintSpade.toColor()
         case .clubs: theme.cardTintClub.toColor()
         case .empty: theme.cardOutline.toColor()
         }
+    }
 
+    @State var width: CGFloat = 0
+    var cornerRadius: CGFloat { width * 0.05 }
+    
+    public var body: some View {
         Group {
             if card.suit == .empty {
                 RoundedRectangle(cornerRadius: cornerRadius)
@@ -50,9 +51,19 @@ public struct CardView<BackgroundView: View>: View {
             } else {
                 Group {
                     if flipped {
-                        back
+                        switch theme.cardStyle {
+                        case .old:
+                            oldBack
+                        case .modern:
+                            modernBack
+                        }
                     } else {
-                        face
+                        switch theme.cardStyle {
+                        case .old:
+                            oldFace
+                        case .modern:
+                            modernFace
+                        }
                     }
                 }
                 .frame(maxHeight: .infinity)
@@ -69,38 +80,10 @@ public struct CardView<BackgroundView: View>: View {
         }
         .aspectRatio(2.5/3.5, contentMode: .fit)
         .cornerRadius(cornerRadius)
-        .tint(tint)
-    }
-    
-    var face: some View {
-        VStack {
-            HStack {
-                suit
-                    .scaleWidth(0.18, using: width)
-                Spacer()
-                rank
-                    .scaleWidth(0.2, using: width)
-            }
-            
-            suit
-                .scaleWidth(0.4, using: width)
-                .frame(maxHeight: .infinity)
-            
-            HStack {
-                rank
-                    .scaleWidth(0.2, using: width)
-                Spacer()
-                suit
-                    .scaleWidth(0.18, using: width)
-            }
-        }
-    }
-    
-    var back: some View {
-        RoundedRectangle(cornerRadius: cornerRadius)
-            .fill(.red)
+        .tint(tintColor)
     }
 }
+
 extension CardView {
     func flipCard() -> CardView {
         CardView(card: self.card, flipped: true, theme: self.theme, backgroundView: self.backgroundView)
@@ -122,7 +105,7 @@ extension CardView where BackgroundView == Color {
             .ignoresSafeArea()
         HStack(spacing: 10) {
             let deck = Card.fullDeck
-            ForEach(deck.prefix(2), id: \.hashValue) { card in
+            ForEach([Card(suit: .hearts, rank: .ace)], id: \.hashValue) { card in
                 let tint: Color = switch card.suit {
                 case .diamonds, .hearts: .red
                 case .clubs, .spades, .empty: .black
